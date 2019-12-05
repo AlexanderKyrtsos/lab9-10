@@ -12,13 +12,14 @@ import org.junit.Test;
 public class testSelectionSort {
 	@Test
 	public void test() {
-		//testPositive();
-		//testNegative();
-		//testMixed();
+		testPositive();
+		testNegative();
+		testMixed();
 		testDuplicates();
 	}
 
     public testSelectionSort() {
+    	
     }
     
     public void testPositive(){
@@ -36,7 +37,9 @@ public class testSelectionSort {
         Sortedarr[3] = 9;
         Sortedarr[4] = 10;
         
-        assertEquals(Sortedarr, arr);
+        SelectionSort ss = new SelectionSort();
+        arr = ss.basicSelectionSort(arr);
+        assertArrayEquals(Sortedarr, arr);
     }
     
     public void testNegative(){
@@ -54,7 +57,9 @@ public class testSelectionSort {
 		Sortedarr[3] = -7;
 		Sortedarr[4] = -2;
 		
-		assertEquals(Sortedarr, arr);
+        SelectionSort ss = new SelectionSort();
+        arr = ss.basicSelectionSort(arr);
+        assertArrayEquals(Sortedarr, arr);
     }
     
     public void testMixed(){
@@ -72,7 +77,9 @@ public class testSelectionSort {
 		Sortedarr[3] = 2;
 		Sortedarr[4] = 3;
 		
-		assertEquals(Sortedarr, arr);
+        SelectionSort ss = new SelectionSort();
+        arr = ss.basicSelectionSort(arr);
+        assertArrayEquals(Sortedarr, arr);
     }
     
     public void testDuplicates(){
@@ -90,6 +97,8 @@ public class testSelectionSort {
 		Sortedarr[3] = 2;
 		Sortedarr[4] = 2;
 		
-		assertEquals(Sortedarr, arr);
+        SelectionSort ss = new SelectionSort();
+        arr = ss.basicSelectionSort(arr);
+        assertArrayEquals(Sortedarr, arr);
     }
 }
