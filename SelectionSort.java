@@ -11,18 +11,20 @@ public class SelectionSort {
      * inputs:
      * outputs:
      * special conditions:
-     */    
-    public int[] basicSelectionSort(int[] x) {
-        for (int i = 0; i < x.length; ++i) {
-            for (int j= i+1; j < x.length; ++j) {
-                if (x[i] > x[j]) {
-                    temp = x[i];
-                    x[i] = x[j];
-                    temp = x[j];
-                }
-            } // end of inner for loop
-        } // end of outer for loop
-        return x;
-    } // end of basicSelectionSort method
+     */  
+    
+	public int[] basicSelectionSort(int[] x) {
+		for (int i = 0; i < x.length; ++i) {
+			int minLoc = i;
+			for (int j= i+1; j < x.length; ++j) 
+				if(x[j] < x[minLoc]) 
+					minLoc = j;
 
+			int temp = x[minLoc];
+			x[minLoc] = x[i];
+			x[i] = temp;
+		}
+
+		return x;
+	}
 }
